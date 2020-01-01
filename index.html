@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+  </head>
+  <body s>
+
+    <div class="container">
+    <div style="background-color:powderblue;" >
+      <div class="header">
+        <h3>Employee attrition</h3>
+      </div>
+    </div>
+      <hr/>
+      <div>
+      <h5>Upload CSV file with details</h5>
+      <form action="upload" method="post" enctype="multipart/form-data">
+        <input type="file" multiple="" name="file[]" class="span3" /><br />
+        <input type="submit" value="Upload"  class="span2">
+      </form>
+
+          <h3>EDA</h3>
+          <img src="{{ user_image }}" alt="User Image" width="1000", height="1000">
+      <!--  <img src="/uploads/export.png" alt="Smiley face" height="500" width="500">-->
+    </div>
+    </div>
+  {% block body %}{% endblock %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="../static/js/scripts.js"></script>
+
+    {% block scripts %}{% endblock %}
+  </body>
+</html>
